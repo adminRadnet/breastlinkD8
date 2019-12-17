@@ -1,0 +1,30 @@
+global-styling:
+  version: 8.0
+  css:
+    base:
+      css/lightbox.min.css: {}
+      css/flickity.css: {}
+      css/iconsmind.css: {}
+      css/socicon.css: {}
+      css/theme.css: {}
+      css/radnet.css: {}
+      css/breastlink.css: {}
+  js:
+    js/countdown.min.js: {}
+    js/datepicker.js: {}
+    js/easypiechart.min.js: {}
+    js/flickity.min.js: {}
+    js/granim.min.js: {}
+    js/isotope.min.js: {}
+    js/lightbox.min.js: {}
+    js/smooth-scroll.min.js: {}
+    js/parallax.js: {}
+    js/spectragram.min.js: {}
+    js/twitterfetcher.min.js: {}
+    js/typed.min.js: {}
+    js/ytplayer.min.js: {}
+    js/scripts.js: {}
+ckeditor_js:
+  version: 8.0
+  js:
+    js/ckeditor.config.js
