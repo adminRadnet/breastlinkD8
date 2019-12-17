@@ -93,12 +93,14 @@ function test(){
 };
 
 (function ($, Drupal) {
-
+  
   Drupal.behaviors.radnet = {
     attach: function (context, settings) {
+    }
+  };
 
+})(jQuery, Drupal);
 
-  
 var mr = (function ($, window, document){
     "use strict";
 
@@ -621,7 +623,6 @@ mr = (function (mr, $, window, document){
 //////////////// Datepicker
 mr = (function (mr, $, window, document){
     "use strict";
-
     var documentReady = function($){
         if($('.datepicker').length){
             $('.datepicker').pickadate();
@@ -639,9 +640,11 @@ mr = (function (mr, $, window, document){
     "use strict";
     mr.dropdowns = {};
     mr.dropdowns.done = false;
+
+    
     
     var documentReady = function($){
-        var rtl = false;
+        var rtl = false; //is reading direction right to left? not for american websites
 
         if($('html[dir="rtl"]').length){
             rtl = true;
@@ -650,6 +653,7 @@ mr = (function (mr, $, window, document){
         if(!mr.dropdowns.done){
             $('body:not(.dropdowns--hover) .dropdown:not(.dropdown--hover), body.dropdowns--hover .dropdown.dropdown--click').on('click',function(event){
                 var dropdown = jQuery(this);
+
                 if(jQuery(event.target).is('.dropdown--active > .dropdown__trigger')){
                     dropdown.siblings().removeClass('dropdown--active').find('.dropdown').removeClass('dropdown--active');
                     dropdown.toggleClass('dropdown--active');
@@ -673,6 +677,7 @@ mr = (function (mr, $, window, document){
          //////////////// Menu dropdown positioning
 	
         if(rtl === false){		
+            
             repositionDropdowns($);
         }else{
             repositionDropdownsRtl($);
@@ -685,6 +690,7 @@ mr = (function (mr, $, window, document){
     };
 
     function repositionDropdowns($){
+        
         $('.dropdown__container').each(function(){
             var container       = jQuery(this),
                 containerOffset = container.offset().left,
@@ -696,11 +702,12 @@ mr = (function (mr, $, window, document){
 		//container.attr('style', 'left: ' + ((-containerOffset)+(masterOffset))) + 'px !important');
                 if(container.find('.dropdown__content:not([class*="-12"])').length){			 
                     content = container.find('.dropdown__content');
-                    content.css('left', ((menuItem)-(masterOffset)));
+                    var calc = ((menuItem) - (masterOffset));
+                    content.css('left', calc);
                 }
-                
         });
         $('.dropdown__content').each(function(){
+           
             var dropdown    = jQuery(this),
                 offset      = dropdown.offset().left,
                 width       = dropdown.outerWidth(true),
@@ -717,6 +724,7 @@ mr = (function (mr, $, window, document){
     function repositionDropdownsRtl($){
 
         var windowWidth = jQuery(window).width();
+
 
         $('.dropdown__container').each(function(){
             var container       = jQuery(this),
@@ -2450,12 +2458,3 @@ mr = (function (mr, $, window, document){
 
 
 }(mr, jQuery, window, document));
-
-
-
-
-
-    }
-  };
-
-})(jQuery, Drupal);
