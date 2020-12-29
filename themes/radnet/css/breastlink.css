@@ -18,6 +18,7 @@ footer .row {margin-left:0; margin-right: 0}
 /* End Boxed Layout */
 
 
+/* Misc Breastlink Styles */
 .bar-1 .menu-horizontal > li > .dropdown__trigger, .bar-1 .menu-horizontal > li > a {font-size:1.1em;font-weight: 400}
 #menu1.wearemobile {
 background: rgb(42,91,173);
@@ -29,12 +30,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4ea7ce', end
 #block-webform-appointment {overflow: visible;}
 .top-search { color:#252525 !important}
 h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;}
+h1, .h1 {font-size: 3.8em;}
+a {transition:all .1s ease-in-out}
 .breastlink-main-map {min-height: 500px;}
 .page-node-type-project h1.page-header {display:none; text-align: center; padding: 0}
 .page-node-type-project h1 {margin:0}
 .page-node-type-project .region-content {padding-top:4em}
 
 
+/* Home Page */
+.path-frontpage .nav-container {min-height:0 !important}
+.utility-bar {  padding: 4em 0;}
+.utility-bar p { margin: 0;}
+.utility-bar a { display: block; padding: .7em .5em}
+.utility-bar a:hover { text-decoration: none;}
+.utility-bar .col-md-2:not(:first-child){border-left: solid 1px #a5e3ff}
+.utility-bar .col-md-2:hover a {background:rgba(255,255,255,.2); cursor: pointer}
+
+
+/* Location Pages */
+.page-node-type-location {}
+.page-node-type-location .field--name-field-project-location-reference {}
+.page-node-type-location .field--name-field-project-location-reference .field--label { font-family: 'Roboto Slab', serif; text-align: center; font-size: 2.35714286em;line-height: 1.36363636em; color: #252525;font-weight: 300; font-variant-ligatures: common-ligatures;margin: 1em 0;}
+.page-node-type-location .field--name-field-project-location-reference .field__items {}
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item { float: left;width: 24%;text-align: center;}
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item h2 {font-size:1.8em}
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item .content,
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item .text-block,
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item .project-credentials,
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item .col-sm-7 {display: none}
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item .col-sm-5 {width:95%}
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item .col-sm-5 .project-images {padding:0}
+.page-node-type-location .field--name-field-project-location-reference .field__items .field--item .col-sm-5 img {margin:auto;border-radius: 50%}
+.page-node-type-location .node--type-project.teaser {}
+
+
+
+
+
+/*All things 991px and larger*/
+@media (min-width: 991px) {
+.path-frontpage nav#menu1 {z-index: 99; width: 100%; position: absolute}
+}
 
 
 
@@ -59,6 +96,8 @@ h1, h2, h3, h4, h5, h6 {font-family: 'Roboto Slab', serif;}
 @media (max-width: 568px) {
  
 }
+
+
 
 
 
